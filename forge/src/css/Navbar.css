@@ -1,0 +1,30 @@
+.navbar {
+    /* background-color: black; */
+    height: 50px;
+    width: 100%;
+    position: fixed;
+
+    display: flex;
+}
+
+.navbar .left-side {
+    background-color: black;
+    width: 70%;
+    height: 100%;
+    padding: 0px 10px;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.navbar .right-side {
+    background-color: black;
+    width: 30%;
+    height: 100%;
+    padding: 0px 10px;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
