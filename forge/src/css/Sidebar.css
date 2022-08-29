@@ -1,0 +1,25 @@
+.sidebar {
+    position: fixed;
+    width: 15%;
+    margin-top: 50px;
+    height: 800px;
+    background-color: #33335E;
+}
+
+.sidebar-card {
+    width: 100%;
+    height: 45px;
+    background-color: #44446f;
+    color: white;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.sidebar :hover {
+    cursor: pointer;
+    background-color: #555580;
+    color: #FF8833;
+}

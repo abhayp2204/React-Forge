@@ -1,3 +1,4 @@
+import Sidebar from "./components/Sidebar"
 
 import "./css/App.css"
 import { useState, useEffect } from "react"
@@ -31,6 +32,7 @@ function App() {
             {user &&
                 <>
                     <Navbar />
+                    <Sidebar />
                 </>
             }
 		</div>
