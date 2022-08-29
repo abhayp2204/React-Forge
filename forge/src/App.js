@@ -9,6 +9,9 @@ import { createUserWithEmailAndPassword } from "firebase/auth"
 import "firebase/compat/firestore"
 import { useAuthState } from "react-firebase-hooks/auth"
 
+// Routes
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom" 
+
 // Components
 import SignUp from "./components/auth/SignUp"
 import SignIn from "./components/auth/SignIn"
@@ -31,8 +34,18 @@ function App() {
             }
             {user &&
                 <>
-                    <Navbar />
-                    <Sidebar />
+                    <Router>
+                        <Routes>
+                            <Route
+                                path="/"
+                                element={ <>
+                                    <Navbar />
+                                    <Sidebar />
+                                </>}
+                            />
+                            <Route path="/navbar" element={<Navbar />} />
+                        </Routes>
+                    </Router>
                 </>
             }
 		</div>

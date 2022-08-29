@@ -15,11 +15,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .sidebar :hover {
     cursor: pointer;
     background-color: #555580;
-    color: #FF8833;
+    color: #FF6633;
 }
