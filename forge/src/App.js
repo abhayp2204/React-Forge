@@ -16,6 +16,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import SignUp from "./components/auth/SignUp"
 import SignIn from "./components/auth/SignIn"
 import Navbar from "./components/Navbar"
+import ForgeNavbar from "./components/forge/Navbar"
+
+// Icons
 import { GrApps } from "react-icons/gr";
 import { GoThreeBars } from "react-icons/go"
 
@@ -33,20 +36,19 @@ function App() {
                 </>
             }
             {user &&
-                <>
-                    <Router>
-                        <Routes>
+                <Router>
+                    <Sidebar />
+                    <Navbar />
+
+                    <div className="routes-container">
+                        <Routes className="routes-container">
                             <Route
-                                path="/"
-                                element={ <>
-                                    <Navbar />
-                                    <Sidebar />
-                                </>}
+                                path="/navbar"
+                                element={<ForgeNavbar />}
                             />
-                            <Route path="/navbar" element={<Navbar />} />
                         </Routes>
-                    </Router>
-                </>
+                    </div>
+                </Router>
             }
 		</div>
 	);

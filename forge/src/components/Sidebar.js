@@ -1,12 +1,19 @@
 import React from "react"
+import { NavLink } from "react-router-dom"
 import "../css/Sidebar.css"
 
 function Sidebar() {
 	return (
 		<div className="sidebar">
-            <div className="sidebar-card">NAVBAR</div>
-            <div className="sidebar-card">SIDEBAR</div>
-            <div className="sidebar-card">PROFILE</div>
+            <NavLink className="link" to="/navbar">
+                <div className="link-name sidebar-card">NAVBAR</div>
+            </NavLink>
+            <NavLink className="link" to="/sidebar">
+                <div className="link-name sidebar-card">SIDEBAR</div>
+            </NavLink>
+            <NavLink className="link" to="/profile">
+                <div className="link-name sidebar-card">PROFILE</div>
+            </NavLink>
         </div>
 	)
 }

@@ -1,5 +1,5 @@
 .navbar {
-    /* background-color: black; */
+    background-color: black;
     height: 50px;
     width: 100%;
     position: fixed;
@@ -27,4 +27,14 @@
     display: flex;
     justify-content: right;
     align-items: center;
+}
+
+.testing {
+    width: 400px;
+    height: 400px;
+    border: 3px solid black;
+
+    position: fixed;
+    top: 100px;
+    left: 200px;
 }
