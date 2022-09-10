@@ -1,3 +1,4 @@
+import Forge from "./components/forge/Forge"
 import Sidebar from "./components/Sidebar"
 
 import "./css/App.css"

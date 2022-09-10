@@ -1,27 +1,30 @@
-import React, { useState, useEffect } from "react"
-import "../../css/Forge/ForgeNavbar.css"
+import React from "react"
 
 // Icons
 import { IconContext } from "react-icons";
 import { GoThreeBars } from "react-icons/go";
 
 import navbars from "../../data/NavItems"
+import Forge from "./Forge";
+import "../../css/Forge/Forge.css"
 
 function ForgeNavbar() {
     const navItems = []
     console.log(navbars)
     navbars.map(navbar => {
         navItems.push (
-            <div className="nav-item">
-                <div className="nav-item-name">{navbar.name}</div>
-                <div className="nav-item-code">{navbar.code}</div>
-            </div>
+            <Forge
+                name={navbar.name}
+                image={navbar.image}
+                js={navbar.js}
+                css={navbar.css}
+            />
         )
     })
 
 
 	return (
-        <div className="forge-navbar">
+        <div className="fc">
             {navItems}
         </div>
 	)
