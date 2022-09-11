@@ -1,13 +1,10 @@
 import React, { useState } from "react"
-import "../../css/Forge/Forge.css"
 
 function Forge(props) {
-    const closedHeight = "0px"
-    const openHeight = "60px"
-    const transparent = "rgba(1,1,1,0)"
-    const opaque = "white"
     const [open, setOpen] = useState(false)
     const [codeLang, setCodeLang] = useState("js")
+    const width = props.width
+    const height = props.height
 
 	return (
 		<div className="fi">
@@ -18,7 +15,7 @@ function Forge(props) {
                 </div>
             </div>
             <div className="fi-image">
-                <img className="fi-imagee" src={props.image} alt="forge item" />
+                <img src={props.image} alt="forge item" />
             </div>
             <div className="fi-code">
                 {open && 
@@ -29,7 +26,7 @@ function Forge(props) {
                     </div>
                     <div className="fi-code-content">
                         {codeLang === "js" && <pre className="fi-code-js">{props.js}</pre>}
-                        {codeLang === "css" && <div className="fi-code-css">{props.css}</div>}
+                        {codeLang === "css" && <pre className="fi-code-css">{props.css}</pre>}
                     </div>
                     </>
                 }

@@ -1,9 +1,4 @@
 import React from "react"
-
-// Icons
-import { IconContext } from "react-icons";
-import { GoThreeBars } from "react-icons/go";
-
 import navbars from "../../data/NavItems"
 import Forge from "./Forge";
 import "../../css/Forge/Forge.css"

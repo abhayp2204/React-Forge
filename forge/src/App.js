@@ -1,12 +1,8 @@
-import Forge from "./components/forge/Forge"
-import Sidebar from "./components/Sidebar"
 
 import "./css/App.css"
-import { useState, useEffect } from "react"
 
 // Firebase
-import { auth, app } from "./firebase.js"
-import { createUserWithEmailAndPassword } from "firebase/auth"
+import { auth } from "./firebase.js"
 import "firebase/compat/firestore"
 import { useAuthState } from "react-firebase-hooks/auth"
 
@@ -14,14 +10,12 @@ import { useAuthState } from "react-firebase-hooks/auth"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom" 
 
 // Components
+import Home from "./components/Home"
 import SignUp from "./components/auth/SignUp"
 import SignIn from "./components/auth/SignIn"
 import Navbar from "./components/Navbar"
+import Sidebar from "./components/Sidebar"
 import ForgeNavbar from "./components/forge/Navbar"
-
-// Icons
-import { GrApps } from "react-icons/gr";
-import { GoThreeBars } from "react-icons/go"
 
 function App() {
     const [user] = useAuthState(auth)
@@ -40,9 +34,12 @@ function App() {
                 <Router>
                     <Sidebar />
                     <Navbar />
-
-                    <div className="routes-container">
+                    <div                            className="routes-container">
                         <Routes className="routes-container">
+                            <Route
+                                path="/"
+                                element={<Home />}
+                            />
                             <Route
                                 path="/navbar"
                                 element={<ForgeNavbar />}
